@@ -2,4 +2,9 @@
 <resources>
 
     <style name="Theme.QuickPay" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.QuickPay.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#334D8F</item>
+        <item name="postSplashScreenTheme">@style/Theme.QuickPay</item>
+    </style>
 </resources>
