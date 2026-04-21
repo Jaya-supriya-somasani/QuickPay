@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Theme.QuickPay" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/primary_color</item>
+    </style>
 
-    <style name="Theme.QuickPay" parent="android:Theme.Material.Light.NoActionBar" />
-
+    <!-- Splash theme with no icon -->
     <style name="Theme.QuickPay.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#334D8F</item>
+        <item name="windowSplashScreenBackground">@color/primary_color</item>
+        <!-- Don't show any icon -->
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
         <item name="postSplashScreenTheme">@style/Theme.QuickPay</item>
     </style>
 </resources>
