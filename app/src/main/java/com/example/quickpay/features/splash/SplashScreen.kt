@@ -1,4 +1,4 @@
-package com.example.quickpay.splash
+package com.example.quickpay.features.splash
 
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
