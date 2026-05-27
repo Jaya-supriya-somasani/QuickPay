@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.quickpay.features.authentication.login.LoginScreen
 import com.example.quickpay.features.authentication.otp_verification.OtpScreen
 import com.example.quickpay.features.authentication.registration.CreateAccountScreen
 import com.example.quickpay.features.authentication.registration.CreateAccountViewModel
@@ -19,6 +20,7 @@ object Routes {
     const val HOME = "home"
     const val DETAIL = "detail"
     const val PROFILE = "profile"
+    const val LOGIN = "login"
     const val OTP = "otp/{phoneNumber}"
     fun otpRoute(phoneNumber: String) = "otp/$phoneNumber"
 }
@@ -49,6 +51,9 @@ fun AppNavigation() {
                 viewModel = viewModel,
                 onContinue = { email, phoneNumber ->
                     navController.navigate(Routes.otpRoute(phoneNumber))
+                },
+                onLogin = {
+                    navController.navigate(Routes.LOGIN)
                 }
             )
         }
@@ -68,6 +73,10 @@ fun AppNavigation() {
                     navController.popBackStack()
                 }
             )
+        }
+
+        composable (Routes.LOGIN){
+            LoginScreen()
         }
 
         // Home Screen
